@@ -1,9 +1,11 @@
 //connect api key to fileconst url = "http://api.football-data.org/v2/matches";
+require('dotenv').config(); 
+const api_key = process.env.API_KEY; 
 fetch(url, {
     method: "GET",
     withCredentials: true,
     headers: {
-      "X-Auth-Token": "AIzaSyCcWtZcaD3QQn5c461Za05p5HMfgmu0l2o",
+      "X-Auth-Token": api_key,
       "Content-Type": "application/json"
     }
   })
